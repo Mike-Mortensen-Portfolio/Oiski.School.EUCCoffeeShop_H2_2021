@@ -15,7 +15,7 @@ The application must include, but is not limited to, the following elements:
   - ICoffeeRepository
 
 As such the following Diagram was written by me, as the structural design for the project (_It is based on the assignments UML diagram_):\
-![CoffeeShopStorageDiagram]()
+![CoffeeShopStorageDiagram](https://github.com/Mike-Mortensen-Portfolio/Oiski.School.EUCCoffeeShop_H2_2021/blob/Developer/EUCCoffeeShopExtendedStorageDiagram.png)
 
 The interface must be written in XAML and be build as a _Windows Presentation Foundation_ application with code behind written in C#.
 I've therefore designed the program to implement two projects.
