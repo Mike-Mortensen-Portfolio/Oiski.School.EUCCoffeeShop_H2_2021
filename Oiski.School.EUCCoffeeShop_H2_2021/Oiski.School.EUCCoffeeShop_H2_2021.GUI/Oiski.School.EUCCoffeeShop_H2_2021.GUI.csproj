@@ -95,5 +95,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Oiski.School.EUCCoffeeShop\Oiski.School.EUCCoffeeShop_H2_2021.csproj">
+      <Project>{25c3f009-4ccb-482f-ba23-3a0b39424369}</Project>
+      <Name>Oiski.School.EUCCoffeeShop_H2_2021</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
