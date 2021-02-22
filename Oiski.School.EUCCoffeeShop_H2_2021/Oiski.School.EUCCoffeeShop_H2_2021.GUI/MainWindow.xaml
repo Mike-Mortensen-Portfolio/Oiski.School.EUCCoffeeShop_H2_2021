@@ -1,12 +1,66 @@
-﻿<Window x:Class="Oiski.School.EUCCoffeeShop_H2_2021.GUI.MainWindow"
-        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+﻿<Window
+    x:Class="Oiski.School.EUCCoffeeShop_H2_2021.GUI.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Oiski.School.EUCCoffeeShop_H2_2021.GUI"
+        xmlns:oiski="clr-namespace:Oiski.School.EUCCoffeeShop_H2_2021.Events;assembly=Oiski.School.EUCCoffeeShop_H2_2021"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
+        Title="EUC Coffee Shop" MinWidth="800" MinHeight="450" Height="450" Width="800" FontWeight="ExtraBold">
+    <Window.Resources>
+        <!-- Defines Commands for navigating to new Windows-->
+        <oiski:WindowViewModel x:Key="Windows"></oiski:WindowViewModel>
+        <!--The Recipe Window Instance-->
+        <local:RecipeWindow x:Key="RecipeWindow" Closing="OnWindowClosing"></local:RecipeWindow>
+    </Window.Resources>
+    <Grid Background="Black" Button.Click="MissingLogic">
+        <!--#region Layout Definitions-->
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="5*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <!--#endregion-->
+
+        <Label Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" Content="EUC Coffee Shop" FontWeight="UltraBold" FontSize="30" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+
+        <!--#region Seperator-->
+        <Grid Grid.Row="1" Grid.Column="1">
+            <!--#region Layout Definitions-->
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+                <RowDefinition Height="2*"></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+            <!--#endregion-->
+
+            <!--#region Button Container-->
+            <!--Routed Event-->
+            <Grid Grid.Row="1" DataContext="{Binding Source={StaticResource Windows}}">
+
+                <!--#region Layout Definitions-->
+                <Grid.RowDefinitions>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                </Grid.RowDefinitions>
+                <!--#endregion-->
+
+                <!--Coffee Machine-->
+                <!-- Catch Missing Logic-->
+                <Button x:Name="btn_machine" Grid.Row="0" Width="200" Height="50" Content="Coffee Machine" Foreground="White" Background="Black"/>
+                <!--Storage-->
+                <Button Grid.Row="1" Width="200" Height="50" Content="Recipies" Foreground="White" Background="Black" Command="{Binding Path=OpenWindow}" CommandParameter="{Binding Source={StaticResource RecipeWindow}}"/>
+                <!--Exit-->
+                <Button Grid.Row="2" Width="200" Height="50" Content="Exit" Foreground="White" Background="Black" Command="{Binding Path=Close}"/>
+            </Grid>
+            <!--#endregion-->
+        </Grid>
+        <!--#endregion-->
     </Grid>
 </Window>

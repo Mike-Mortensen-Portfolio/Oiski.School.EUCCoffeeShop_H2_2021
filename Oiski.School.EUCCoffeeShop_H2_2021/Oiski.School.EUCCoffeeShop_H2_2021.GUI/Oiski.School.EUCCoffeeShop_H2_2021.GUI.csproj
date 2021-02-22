@@ -55,6 +55,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="RecipeWindow.xaml.cs">
+      <DependentUpon>RecipeWindow.xaml</DependentUpon>
+    </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -67,6 +70,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="RecipeWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -96,6 +103,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Oiski.Common.Framework\Oiski.Common.Framework.csproj">
+      <Project>{076BAB80-A723-4D83-BA88-A1E6282EEDAA}</Project>
+      <Name>Oiski.Common.Framework</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Oiski.School.EUCCoffeeShop\Oiski.School.EUCCoffeeShop_H2_2021.csproj">
       <Project>{25c3f009-4ccb-482f-ba23-3a0b39424369}</Project>
       <Name>Oiski.School.EUCCoffeeShop_H2_2021</Name>
