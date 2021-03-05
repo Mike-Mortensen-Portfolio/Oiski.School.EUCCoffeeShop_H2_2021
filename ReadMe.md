@@ -51,3 +51,4 @@ The syntax for the structure of folders must be presented as: [DeveloperName]/[V
 2. [Oiski.School.Bank_H1_2020](https://github.com/ZhakalenDk/Oiski.School.Bank_H1_2020)
 3. [Oiski.School.RainStatistic_H2_2021](https://github.com/ZhakalenDk/Oiski.School.RainStatistic_H2_2021)
 4. [Oiski.School.FitnessLevel_H2_2021](https://github.com/ZhakalenDk/Oiski.School.FitnessLevel_H2_2021)
+5. [Oiski.School.WPF_H2_2021](https://github.com/Mike-Mortensen-Portfolio/Oiski.School.WPF_H2_2021)
