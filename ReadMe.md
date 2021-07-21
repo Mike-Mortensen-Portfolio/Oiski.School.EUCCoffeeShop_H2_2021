@@ -1,5 +1,10 @@
 ﻿# Oiski's EUC Coffee Shop
 
+## Quick Note
+As the assignment wasn't fully specified and the teacher couldn't provide us (_students_) with enough information on the assignment the program was cut short and we (_students_) where therefore unable to finish the project as originally intended due to time restriction.
+This means that the program lacks features that I originally intended to be implemented but had to take out to accomodate the new deadline and program specifications provided by our teacher.
+
+
 ## About The Project
 The project is a beginner level assignment where we have to build a _storage-system_ for a Coffee Shop named **EUC Coffee Shop**.
 The point of the assignment is to demonstrate our competence regarding the use and design of WPF applications.
